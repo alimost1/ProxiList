@@ -128,7 +128,7 @@ export default function AdminCategoriesPage() {
               {filteredCategories.length === 0 && (
                 <tr>
                   <td colSpan={6} className="p-8 text-center text-slate-500 dark:text-slate-400">
-                    No categories found matching "{searchTerm}".
+                    No categories found matching &ldquo;{searchTerm}&rdquo;.
                   </td>
                 </tr>
               )}

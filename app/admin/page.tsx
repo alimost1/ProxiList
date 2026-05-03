@@ -61,7 +61,7 @@ export default function AdminDashboardPage() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-slate-900 dark:text-white" style={{fontFamily: "'Merriweather', serif"}}>Dashboard Overview</h1>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Welcome back, Ali. Here's what's happening today.</p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Welcome back, Ali. Here&apos;s what&apos;s happening today.</p>
         </div>
         <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors shadow-sm shadow-blue-500/20 w-full sm:w-auto">
           Generate Report
