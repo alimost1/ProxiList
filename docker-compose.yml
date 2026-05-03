@@ -1,0 +1,39 @@
+services:
+  proxilist:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: proxilist-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - proxilist-network
+
+  # Nginx reverse proxy (optional - uncomment to use)
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: proxilist-nginx
+  #   restart: unless-stopped
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+  #   depends_on:
+  #     - proxilist
+  #   networks:
+  #     - proxilist-network
+
+networks:
+  proxilist-network:
+    driver: bridge
