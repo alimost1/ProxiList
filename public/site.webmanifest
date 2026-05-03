@@ -1,0 +1,10 @@
+{
+  "name": "ProxiList",
+  "short_name": "ProxiList",
+  "description": "Find trusted local professionals across Morocco",
+  "icons": [],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#FACC15",
+  "background_color": "#0F172A"
+}
